@@ -11,7 +11,7 @@ function App() {
   const [opened, handlers] = useDisclosure(false);
   const [message, setMessage] = useState({title: 'ゲームパッド接続済み', message: '', color: 'green'});
   const [gamePad, setGamePad] = useState<any>();
-  const [page, toggle] = useToggle(['Aquarium', 'ActionGame', 'Aquarium', 'Insect']);
+  const [page, toggle] = useToggle(['ActionGame', 'Aquarium', 'Insect']);
 
   window.addEventListener("gamepadconnected", (e) => {
     handlers.open();
