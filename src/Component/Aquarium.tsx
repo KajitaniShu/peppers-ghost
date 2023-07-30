@@ -32,7 +32,7 @@ export function Aquarium() {
         <Environment preset="city" />
         <OrbitControls autoRotate/>
         <group>
-          <RoundedBox scale={[15, 15, 15]}>
+          <RoundedBox scale={[9, 9, 9]}>
             <MeshTransmissionMaterial
               backside
               samples={6}
