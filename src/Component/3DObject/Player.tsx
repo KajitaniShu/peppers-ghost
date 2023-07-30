@@ -37,20 +37,20 @@ export function Player() {
     rigidBody.current.setLinvel({ x: direction.x, y: velocity.y, z: direction.z }, true)
     
     if (rigidPos.y < 1 && rigidPos.y > -5 && jump) rigidBody.current.setLinvel({ x: 0, y: 4, z: 0 }, true)
-    if(rigidPos.y < -10) rigidBody.current.setTranslation(new Vector3(0, 1, 7.5), true);
+    if(rigidPos.y < -10) rigidBody.current.setTranslation(new Vector3(0, 1, -7.5), true);
   })
   
   return (
     <>
-      <RigidBody ref={rigidBody} position={[0, 1, 7.5]} lockRotations={true}>
+      <RigidBody ref={rigidBody} position={[0, 1, -7.5]} lockRotations={true}>
         <CapsuleCollider args={[0.5, 0.5]}/>
         <Knight position={[0, -0.2, 0]} scale={[0.5, 0.5, 0.5]}/>
       </RigidBody>
       <CuboidCollider
-      position={[0, -2, -8]}
+      position={[0, -2, 8]}
       args={[0.5, 1, 0.5]}
       sensor
-      onIntersectionEnter={() => {rigidBody.current.setTranslation(new Vector3(0, 1, 7.5), true)}}
+      onIntersectionEnter={() => {rigidBody.current.setTranslation(new Vector3(0, 1, -7.5), true)}}
     />
     <></>
     </>

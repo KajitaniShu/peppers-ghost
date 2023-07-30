@@ -7,6 +7,7 @@ import { Notification } from '@mantine/core';
 import {  Button } from '@mantine/core';
 import { useDisclosure, useToggle } from '@mantine/hooks';
 
+
 function App() {
   const [opened, handlers] = useDisclosure(false);
   const [message, setMessage] = useState({title: 'ゲームパッド接続済み', message: '', color: 'green'});
@@ -29,7 +30,6 @@ function App() {
     }
     
     if (gamepads && gamepads?.buttons[9].pressed) toggle()
-    
     requestAnimationFrame(loop);
   };
 
@@ -50,6 +50,7 @@ function App() {
             {message.message}
         </Notification>
       }
+      
       {page==="ActionGame"  && <ActionGame/>}
       {page==="Aquarium"    && <Aquarium/>}
       {page==="Insect"      && <Insect/>}
