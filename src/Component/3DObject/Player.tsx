@@ -22,8 +22,8 @@ export function Player() {
       return;
     }
 
-    if (gamepads && gamepads?.buttons[15].pressed) right = 1.0;
-    if (gamepads && gamepads?.buttons[14].pressed) left = 1.0;
+    if (gamepads && gamepads?.buttons[14].pressed) right = 1.0;
+    if (gamepads && gamepads?.buttons[15].pressed) left = 1.0;
     if (gamepads && gamepads?.buttons[0].pressed)  jump = 1.0;
     
     const velocity = rigidBody.current.linvel();

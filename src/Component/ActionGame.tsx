@@ -22,7 +22,7 @@ export function ActionGame() {
           height: '100vh',
         }}
         camera={{ 
-          position: [30, 4, 0],
+          position: [30, 1, 0],
           fov: 45,
         }}
       >
